@@ -15,10 +15,9 @@
 	<hr>
 	<h4>${message}</h4>
 	<hr>
-	<form action="LoginServlet" method="post">
+	<form action="HomePage" method="post">
 		<label>Username : </label><input type="username" name="username"><br>
 		<label>Password : </label><input type="password" name="password"><br>
-		<label>Contact : </label><input type="contact" name="contact"><br>
 		</label><input type="submit" value="Login">
 	</form>
 </body>

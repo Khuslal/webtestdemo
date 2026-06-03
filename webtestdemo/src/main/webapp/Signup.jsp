@@ -17,9 +17,10 @@
 	<br>
 	<br>
 	<form action="SignupServlet" method="post">
+		<label>First Name : </label><input type="fjrstname" name="fname"><br>
+		<label>Last Name : </label><input type="lastname" name="lname"><br>
 		<label>Username : </label><input type="username" name="username"><br>
 		<label>Password : </label><input type="password" name="password"><br>
-		<label>Contact : </label><input type="contact" name="contact"><br>
 		</label><input type="submit" value="Signup">
 	</form>
 </body>

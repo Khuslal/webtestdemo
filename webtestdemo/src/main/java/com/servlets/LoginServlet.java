@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/LoginServlet")
+@WebServlet("/HomePage")
 public class LoginServlet extends HttpServlet{
 	
 	@Override
@@ -20,10 +20,9 @@ public class LoginServlet extends HttpServlet{
 		if(un.equals("hari") && pass.equals("password")) {
 			request.setAttribute("uname", un);
 			request.setAttribute("pwd", pass);
-			request.setAttribute("contact", contact);
 			request.getRequestDispatcher("Home.jsp").forward(request, resposne);
 		} else {
-			request.setAttribute("message", "Username not matched!");
+			request.setAttribute("message", "Username not found!");
 			request.getRequestDispatcher("LoginForm.jsp").forward(request, resposne);
 		}
 	}
