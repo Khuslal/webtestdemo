@@ -13,12 +13,12 @@
 		<a href="index.jsp">Back</a>
 	</h6>
 	<hr>
-	<h4>${message}</h4>
+	<h4 color:"red">${message}</h4>
 	<hr>
-	<form action="HomePage" method="post">
-		<label>Username : </label><input type="username" name="username"><br>
+	<form action="LoginServlet" method="post">
+		<label>Username : </label><input type="text" name="username"><br>
 		<label>Password : </label><input type="password" name="password"><br>
-		</label><input type="submit" value="Login">
+		<label><input type="submit" value="Login"></label>
 	</form>
 </body>
 </html>

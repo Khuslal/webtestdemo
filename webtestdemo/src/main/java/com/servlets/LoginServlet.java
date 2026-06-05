@@ -2,24 +2,36 @@ package com.servlets;
 
 import java.io.IOException;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import com.service.UserService;
+import com.service.UserServiceImpl;
 
-@WebServlet("/HomePage")
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet{
 	
+	// doGet : used only to forward to the LoginForm.jsp page when the link jumps to /LoginServlet address
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws SecurityException, IOException, ServletException {
+		request.getRequestDispatcher("LoginForm.jsp").forward(request, response);
+	}
+	
+	// doPost
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse resposne) throws ServletException, IOException {
 		String un = request.getParameter("username");
 		String pass = request.getParameter("password");
-		String contact = request.getParameter("contact");
+
+		UserService service = new UserServiceImpl();
 		
-		if(un.equals("hari") && pass.equals("password")) {
-			request.setAttribute("uname", un);
-			request.setAttribute("pwd", pass);
+		if(service.userLogin(un, pass)) {
+			request.setAttribute("username", un);
+			request.setAttribute("password", pass);
 			request.getRequestDispatcher("Home.jsp").forward(request, resposne);
 		} else {
 			request.setAttribute("message", "Username not found!");

@@ -9,8 +9,9 @@
 <body>
 	<h1>You are inside Home Page.</h1>
 	<hr>
-	<h4>Username : ${uname}</h4>
-	<h4>Password : ${pwd}</h4>
-	<h4>Contact : ${contact}</h4>
+	<h4>Hi ${username}</h4>
+	<h4>Your Password is : ${password}</h4>
+	
+	<a href="UserListServlet">UserList</a>
 </body>
 </html>

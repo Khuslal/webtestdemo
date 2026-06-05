@@ -11,9 +11,9 @@
 	<hr>
 	
 	<ul>
-	<li><a href="LoginForm.jsp">Login</a></li>
-	<li><a href="Signup.jsp">Signup</a></li>
-	<li><a href="Home.jsp">Home</a></li>
+	<li><a href="LoginServlet">Login</a></li>
+	<li><a href="SignupServlet">Signup</a></li>
+	<li><a href="LoginServlet">Home</a></li>
 	<li><a href="Contact.jsp">Contact</a></li>
 	</ul>
 	<hr>

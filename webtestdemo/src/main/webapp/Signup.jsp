@@ -17,11 +17,11 @@
 	<br>
 	<br>
 	<form action="SignupServlet" method="post">
-		<label>First Name : </label><input type="fjrstname" name="fname"><br>
-		<label>Last Name : </label><input type="lastname" name="lname"><br>
-		<label>Username : </label><input type="username" name="username"><br>
+		<label>First Name : </label><input type="text" name="fname"><br>
+		<label>Last Name : </label><input type="text" name="lname"><br>
+		<label>Username : </label><input type="text" name="username"><br>
 		<label>Password : </label><input type="password" name="password"><br>
-		</label><input type="submit" value="Signup">
+		<label><input type="submit" value="Signup"></label>
 	</form>
 </body>
 </html>

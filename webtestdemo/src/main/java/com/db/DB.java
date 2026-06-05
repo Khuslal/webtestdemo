@@ -11,8 +11,7 @@ public class DB {
 	public static Connection getDBCon() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection conn = DriverManager.getConnection(url, username, password);
-			return conn;
+			return  DriverManager.getConnection(url, username, password);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
